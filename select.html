@@ -5,10 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>드롭다운 셀렉트 박스</title>
+    <style>
+        .mainSelect {
+            background-color: #FFF;
+            width: 200px;
+            padding: 12px 12px 12px 13px;
+            border: 1px solid #C4C4C4;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+        }
+        .mainSelect::after {
+            content: '';
+            width: 12px;
+            height: 8px;
+            margin-left: 55px;
+            vertical-align: middle;
+            display: inline-block;
+            background-image: url('img/arrow.png');
+            background-repeat: no-repeat;
+        }
+
+        .languageList {
+            background: #FFFFFF;
+            width: 200px;
+            padding: 8px 7px 8px;
+            margin-top: 9px;
+            border: 1px solid #C4C4C4;
+            border-radius: 10px;
+            box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+            box-sizing: border-box;
+        }
+
+        .languageList > li {
+            list-style-type: none;
+        }
+        
+        .languageList > li > button {
+            /* background-color: #FFF; */
+            background: #F8E4FF;
+            width: 100%;
+            padding: 7px 0 7px 10px;
+            margin-bottom: 5px;
+
+            border: none;
+            border-radius: 8px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: left;
+        }
+        /* button:last-child {
+            margin-bottom: 0;
+        } */
+        /* button:not(:last-child) {
+            margin-bottom: 5px;
+        } */
+
+    </style>
 </head>
 <body>
-<button class="btn-select">최애 프로그래밍 언어</button>
-<ul class="list-member">
+<button class="mainSelect">최애 프로그래밍 언어</button>
+<ul class="languageList">
     <li><button type="button">python</button></li>
     <li><button type="button">Java</button></li>
     <li><button type="button">JavaScript</button></li>
