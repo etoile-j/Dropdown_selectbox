@@ -16,6 +16,8 @@
             font-weight: 400;
             font-size: 12px;
             line-height: 14px;
+            text-align: left;
+            cursor: pointer;
         }
         .mainSelect::after {
             content: '';
@@ -27,8 +29,12 @@
             background-image: url('img/arrow.png');
             background-repeat: no-repeat;
         }
+        /* .mainSelect::after {
+            transform: rotate(180deg);
+        } */
 
         .languageList {
+            display: none;
             background: #FFFFFF;
             width: 200px;
             padding: 8px 7px 8px;
@@ -44,8 +50,7 @@
         }
         
         .languageList > li > button {
-            /* background-color: #FFF; */
-            background: #F8E4FF;
+            background-color: #FFF;
             width: 100%;
             padding: 7px 0 7px 10px;
             margin-bottom: 5px;
@@ -56,6 +61,14 @@
             font-size: 14px;
             line-height: 16px;
             text-align: left;
+            cursor: pointer;
+        }
+        .languageList > li > button:hover{
+            background: #F8E4FF;
+        }
+
+        .noMargin {
+            margin-bottom: 0;
         }
         /* button:last-child {
             margin-bottom: 0;
@@ -64,16 +77,27 @@
             margin-bottom: 5px;
         } */
 
+        /* dom */
+        .click_mainSelect {
+            border: 1px solid #9B51E0;
+            outline: 3px solid #F8E4FF;
+        }
+        .click_languageList {
+            display: block;
+        }
+
+
     </style>
 </head>
 <body>
 <button class="mainSelect">최애 프로그래밍 언어</button>
 <ul class="languageList">
-    <li><button type="button">python</button></li>
+    <li><button type="button" class="python">python</button></li>
     <li><button type="button">Java</button></li>
     <li><button type="button">JavaScript</button></li>
     <li><button type="button">C#</button></li>
-    <li><button type="button">C/C++</button></li>
+    <li><button type="button" class="noMargin">C/C++</button></li>
 </ul>
+<script src="script.js"></script>
 </body>
 </html>
