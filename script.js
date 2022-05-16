@@ -1,6 +1,5 @@
 const mainSelect = document.querySelector(".mainSelect");
 const languageList = document.querySelector(".languageList");
-const arrow = document.querySelector(".mainSelect::after");
 
 mainSelect.addEventListener('click', () => {
 	// mainSelect.classList.toggle('click_mainSelect');
@@ -22,7 +21,3 @@ languageList.addEventListener('click', e => {
         languageList.classList.remove('click_languageList');
     }
 });
-
-
-// 클래스로 넣고 빼주는 방식을 사용할까 아님 직접적으로??
-// 클래스일거같다..?
